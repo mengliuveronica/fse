@@ -1,0 +1,29 @@
+# Development Guide
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   - Backend: `pip install -r requirements.txt`
+   - Frontend: `cd frontend && npm install`
+3. Set up a Supabase project:
+   - Create a new project on Supabase
+   - Run the SQL commands from `supabase_setup.sql` in the SQL editor
+   - Copy your project URL and anon key
+4. Set up environment variables:
+   - Create a `.env` file in the `backend` directory
+   - Add your Supabase URL and key:
+     ```
+     SUPABASE_URL=your_supabase_project_url
+     SUPABASE_KEY=your_supabase_anon_key
+     ```
+5. Run the application:
+   - Backend: `python backend/app.py`
+   - Frontend: `cd frontend && npm start`
+
+## Deployment
+
+1. Deploy the backend to a platform of your choice (e.g., Heroku, DigitalOcean)
+2. Set the `SUPABASE_URL` and `SUPABASE_KEY` environment variables on your deployment platform
+3. Deploy the frontend to a static hosting service (e.g., Netlify, Vercel)
+4. Update the API endpoint in the frontend code to point to your deployed backend
